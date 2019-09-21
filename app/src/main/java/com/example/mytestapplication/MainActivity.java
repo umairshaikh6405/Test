@@ -15,6 +15,7 @@ import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.distribute.Distribute;
+import com.microsoft.appcenter.distribute.UpdateAction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
         AppCenter.start(getApplication(), "ade522e2-7196-4495-8974-954ff921feed",
                 Distribute.class);
+        Distribute.notifyUpdateAction(UpdateAction.UPDATE);
     }
 
     @Override
